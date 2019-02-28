@@ -92,7 +92,7 @@ public class ExcelDemoApplication {
 			cell = row.createCell(3);
 			cell.setCellValue("SQRT(C5)");
 			workbook.getCreationHelper().createFormulaEvaluator().evaluateAll();
-			FileOutputStream out = new FileOutputStream(new File("C:\\Users\\AC21398\\Desktop\\test\\Book2.xlsx"));
+			FileOutputStream out = new FileOutputStream(new File("<Give your system path>\\Book2.xlsx"));
 			workbook.write(out);
 			out.close();
 			System.out.println("fromula.xlsx written successfully");
@@ -103,7 +103,7 @@ public class ExcelDemoApplication {
 
 	static void readDataFromExcelFile() {
 		try {
-			FileInputStream file = new FileInputStream(new File("C:\\Users\\AC21398\\Desktop\\test\\Book1.xlsx"));
+			FileInputStream file = new FileInputStream(new File("<Give your system path by keeping Book1.xlsx file>\\Book1.xlsx"));
 			Workbook workbook = new XSSFWorkbook(file);
 			Sheet datatypeSheet = workbook.getSheetAt(0);
 			Iterator<Row> iterator = datatypeSheet.iterator();
